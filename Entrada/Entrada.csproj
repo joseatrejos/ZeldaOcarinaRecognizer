@@ -98,15 +98,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="carro-cruz-azul.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Avion.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Image\Ocarina.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Audio\Success.mp3" />
     <Content Include="Video\Epona.mp4" />
     <Content Include="Video\Healing.mp4" />
     <Content Include="Video\Forest.mp4" />
@@ -139,5 +134,6 @@
     <Resource Include="Image\LtEspiritu.png" />
     <Content Include="Image\LtReconocer.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

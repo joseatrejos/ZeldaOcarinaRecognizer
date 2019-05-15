@@ -76,6 +76,12 @@ namespace Entrada
                             LtLuz.Visibility = Visibility.Hidden;
                             LtEspiritu.Visibility = Visibility.Hidden;
                             LtBosque.Visibility = Visibility.Hidden;
+
+                            /*
+                            Ocarina.Visibility = Visibility.Hidden;
+                            Notas.Visibility = Visibility.Hidden;
+                            VidEpona.Visibility = Visibility.Hidden; // Esto seguro será una función pero mínimo ahí está el nombre jeje
+                            */
                         }
                         else if (cancion == zelda)
                         {
@@ -92,6 +98,12 @@ namespace Entrada
                             LtLuz.Visibility = Visibility.Hidden;
                             LtEspiritu.Visibility = Visibility.Hidden;
                             LtBosque.Visibility = Visibility.Hidden;
+
+                            /*
+                            Ocarina.Visibility = Visibility.Hidden;
+                            Notas.Visibility = Visibility.Hidden;
+                            VidZelda.Visibility = Visibility.Hidden;
+                            */
                         }
                         else if (cancion == saria)
                         {
@@ -108,6 +120,12 @@ namespace Entrada
                             LtLuz.Visibility = Visibility.Hidden;
                             LtEspiritu.Visibility = Visibility.Hidden;
                             LtBosque.Visibility = Visibility.Hidden;
+
+                            /*
+                            Ocarina.Visibility = Visibility.Hidden;
+                            Notas.Visibility = Visibility.Hidden;
+                            VidSaria.Visibility = Visibility.Hidden;
+                            */
                         }
                         else if (cancion == sun)
                         {
@@ -124,6 +142,12 @@ namespace Entrada
                             LtLuz.Visibility = Visibility.Hidden;
                             LtEspiritu.Visibility = Visibility.Hidden;
                             LtBosque.Visibility = Visibility.Hidden;
+
+                            /*
+                            Ocarina.Visibility = Visibility.Hidden;
+                            Notas.Visibility = Visibility.Hidden;
+                            VidSun.Visibility = Visibility.Hidden;
+                            */
                         }
                         else if (cancion == storms)
                         {
@@ -140,6 +164,12 @@ namespace Entrada
                             LtLuz.Visibility = Visibility.Hidden;
                             LtEspiritu.Visibility = Visibility.Hidden;
                             LtBosque.Visibility = Visibility.Hidden;
+
+                            /*
+                            Ocarina.Visibility = Visibility.Hidden;
+                            Notas.Visibility = Visibility.Hidden;
+                            VidStorms.Visibility = Visibility.Hidden;
+                            */
                         }
                         else if (cancion == time)
                         {
@@ -156,6 +186,12 @@ namespace Entrada
                             LtLuz.Visibility = Visibility.Hidden;
                             LtEspiritu.Visibility = Visibility.Hidden;
                             LtBosque.Visibility = Visibility.Hidden;
+
+                            /*
+                            Ocarina.Visibility = Visibility.Hidden;
+                            Notas.Visibility = Visibility.Hidden;
+                            VidTime.Visibility = Visibility.Hidden;
+                            */
                         }
                         else if (cancion == light)
                         {
@@ -172,6 +208,12 @@ namespace Entrada
                             LtNana.Visibility = Visibility.Hidden;
                             LtEspiritu.Visibility = Visibility.Hidden;
                             LtBosque.Visibility = Visibility.Hidden;
+
+                            /*
+                            Ocarina.Visibility = Visibility.Hidden;
+                            Notas.Visibility = Visibility.Hidden;
+                            VidLight.Visibility = Visibility.Hidden;
+                            */
                         }
                         else if (cancion == spirit)
                         {
@@ -188,6 +230,12 @@ namespace Entrada
                             LtNana.Visibility = Visibility.Hidden;
                             LtLuz.Visibility = Visibility.Hidden;
                             LtBosque.Visibility = Visibility.Hidden;
+
+                            /*
+                            Ocarina.Visibility = Visibility.Hidden;
+                            Notas.Visibility = Visibility.Hidden;
+                            VidSpirit.Visibility = Visibility.Hidden;
+                            */
                         }
                         else if (cancion == healing)
                         {
@@ -204,6 +252,12 @@ namespace Entrada
                             LtLuz.Visibility = Visibility.Hidden;
                             LtEspiritu.Visibility = Visibility.Hidden;
                             LtBosque.Visibility = Visibility.Hidden;
+
+                            /*
+                            Ocarina.Visibility = Visibility.Hidden;
+                            Notas.Visibility = Visibility.Hidden;
+                            VidHealing.Visibility = Visibility.Hidden;
+                            */
                         }
                         else if (cancion == forest)
                         {
@@ -220,6 +274,12 @@ namespace Entrada
                             LtNana.Visibility = Visibility.Hidden;
                             LtLuz.Visibility = Visibility.Hidden;
                             LtEspiritu.Visibility = Visibility.Hidden;
+
+                            /*
+                            Ocarina.Visibility = Visibility.Hidden;
+                            Notas.Visibility = Visibility.Hidden;
+                            VidForest.Visibility = Visibility.Hidden;
+                            */
                         }
                     }
                 }
