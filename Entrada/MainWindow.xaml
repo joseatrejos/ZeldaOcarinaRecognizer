@@ -1,0 +1,64 @@
+﻿<Window x:Class="Entrada.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Entrada"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="676.4" Width="838.2">
+    <Grid>
+        <!-- Fondo y Letreros -->
+        <Canvas x:Name="canvas" HorizontalAlignment="Left" Height="617" Margin="0,0,-0.4,-0.2" VerticalAlignment="Top" Width="822">
+            <!-- Always Shown -->
+            <Image x:Name="Fondo" Visibility="Visible" Height="1020" Width="1100" Canvas.Top="-188" Source="Image/Fondo.png" RenderTransformOrigin="0.006,0.571" Canvas.Left="-140" />
+            <Image x:Name="Ocarina" Visibility="Visible" Height="546" Width="723" Source="Image/Ocarina.png" RenderTransformOrigin="0.006,0.571" Canvas.Top="25" Canvas.Left="47" />
+
+            <!-- Shown at Playback -->
+            <Image x:Name="Notas" Visibility="Hidden" Height="654" Width="868" Source="Image/Notas.png" RenderTransformOrigin="0.006,0.571" Canvas.Top="-33" Canvas.Left="-44" />
+            <Image x:Name="LtEscuchando" Visibility="Hidden" Height="266" Width="353" Source="Image/LtEscuchando.png" RenderTransformOrigin="0.006,0.571" Canvas.Top="430" Canvas.Left="225" />
+
+            <!-- Shown when a song is recognized -->
+            <Image x:Name="LtFuego" Visibility="Hidden" Height="622" Width="824" Canvas.Top="373" Source="Image/LtFuego.png" RenderTransformOrigin="0.006,0.571" />
+            <Image x:Name="LtAgua" Visibility="Hidden" Height="622" Width="824" Canvas.Top="373" Source="Image/LtAgua.png" RenderTransformOrigin="0.006,0.571" />
+            <Image x:Name="LtSaria" Visibility="Hidden" Height="622" Width="824" Source="Image/LtSaria.png" RenderTransformOrigin="0.006,0.571" Canvas.Top="373" Canvas.Left="-2" />
+            <Image x:Name="LtEpona" Visibility="Hidden" Height="622" Width="824" Source="Image/LtEpona.png" RenderTransformOrigin="0.006,0.571" Canvas.Top="373" />
+        </Canvas>
+
+        <!-- Microfono -->
+        <TextBlock x:Name="EligeMicrofono" HorizontalAlignment="Left" Margin="24,15,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="474" FontSize="20" RenderTransformOrigin="0.5,0.5" FontWeight="Bold" Foreground="White" Text="Micrófono:">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.367"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform></TextBlock>
+        <ComboBox x:Name="cmb_Dispositivos" HorizontalAlignment="Left" Margin="22,58,0,0" VerticalAlignment="Top" Width="178" SelectedIndex="0"/>
+
+        <!-- Botones Play y Stop -->
+        <Button x:Name="btn_Reconocer" Visibility="Visible" HorizontalAlignment="Left" Margin="170,501,0,0" VerticalAlignment="Top" Width="465" RenderTransformOrigin="0.493,0.5" Click="btn_Iniciar_Click" Height="110">
+            <DockPanel>
+                <Image Source="Image/LtReconocer.png" Height="90" Width="454"/>
+            </DockPanel>
+        </Button>
+        <Button x:Name="btn_Detener" Content="Detener" HorizontalAlignment="Left" Margin="715,15,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.493,0.5" Click="btn_Detener_Click"/>
+
+        <!-- Slider que guarda la frecuencia -->
+        <Slider x:Name="sld_Microfono" Visibility="Hidden" HorizontalAlignment="Left" Margin="677,71,-13,0" VerticalAlignment="Top" Width="128" RenderTransformOrigin="0.5,0.5" Maximum="44101">
+            <Slider.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Slider.RenderTransform>
+        </Slider>
+
+        <!-- Reconocimiento de Notas a borrar -->
+        <TextBox x:Name="lbl_Nota" HorizontalAlignment="Left" Height="43" Margin="671,547,-0.4,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="151"/>
+        <TextBlock x:Name="lbl_EO" HorizontalAlignment="Left" Margin="671,492,-0.4,0" TextWrapping="Wrap" Text="EO" VerticalAlignment="Top" Height="36" Width="151" Foreground="White" FontWeight="Bold"/>
+        <TextBlock x:Name="lbl_Frecuencia" HorizontalAlignment="Left" Margin="671,450,-42.4,0" TextWrapping="Wrap" Text="0 Hz" VerticalAlignment="Top" Height="37" Width="193" FontSize="24" Foreground="#FFF3F3F3" FontWeight="Bold"/>
+    </Grid>
+</Window>
