@@ -75,5 +75,18 @@
         <!-- Reconocimiento de Notas a borrar -->
         <TextBox x:Name="lbl_Nota" HorizontalAlignment="Left" Height="43" Margin="671,547,-0.4,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="151"/>
         <TextBlock x:Name="lbl_Frecuencia" HorizontalAlignment="Left" Margin="671,450,-42.4,0" TextWrapping="Wrap" Text="0 Hz" VerticalAlignment="Top" Height="37" Width="193" FontSize="24" Foreground="#FFF3F3F3" FontWeight="Bold"/>
+        
+        <!-- Videos -->
+        <MediaElement Source="Video/Epona.mp4" Margin="170,105,192,177.2" />
+        <MediaElement Source="Video/Forest.mp4" Margin="170,105,192,177.2" />
+        <MediaElement Source="Video/Healing.mp4" Margin="170,105,192,177.2" />
+        <MediaElement Source="Video/Light.mp4" Margin="170,105,192,177.2" />
+        <MediaElement Source="Video/Saria.mp4" Margin="170,105,192,177.2" />
+        <MediaElement Source="Video/Spirit.mp4" Margin="170,105,192,177.2" />
+        <MediaElement Source="Video/Storms.mp4" Margin="170,105,192,177.2" />
+        <MediaElement Source="Video/Sun.mp4" Margin="170,105,192,177.2" />
+        <MediaElement Source="Video/Time.mp4" Margin="170,105,192,177.2" />
+        <MediaElement Source="Video/Zelda.mp4" Margin="170,105,192,177.2" />
     </Grid>
 </Window>
+    

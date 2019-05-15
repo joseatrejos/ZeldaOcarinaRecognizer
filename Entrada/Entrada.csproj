@@ -107,6 +107,16 @@
     <Resource Include="Image\Ocarina.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Video\Epona.mp4" />
+    <Content Include="Video\Healing.mp4" />
+    <Content Include="Video\Forest.mp4" />
+    <Content Include="Video\Light.mp4" />
+    <Content Include="Video\Spirit.mp4" />
+    <Content Include="Video\Saria.mp4" />
+    <Content Include="Video\Storms.mp4" />
+    <Content Include="Video\Sun.mp4" />
+    <Content Include="Video\Time.mp4" />
+    <Content Include="Video\Zelda.mp4" />
     <Resource Include="Image\LtTormentas.png" />
     <Resource Include="Image\LtLuz.png" />
     <Resource Include="Image\LtNana.png" />
