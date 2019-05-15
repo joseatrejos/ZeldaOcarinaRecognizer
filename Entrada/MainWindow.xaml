@@ -17,11 +17,27 @@
             <Image x:Name="Notas" Visibility="Hidden" Height="654" Width="868" Source="Image/Notas.png" RenderTransformOrigin="0.006,0.571" Canvas.Top="-33" Canvas.Left="-44" />
             <Image x:Name="LtEscuchando" Visibility="Hidden" Height="266" Width="353" Source="Image/LtEscuchando.png" RenderTransformOrigin="0.006,0.571" Canvas.Top="430" Canvas.Left="225" />
 
+            <!-- Shown when a note is recognized -->
+            <Image x:Name="BtnA" Visibility="Hidden" Height="290" Width="300" Canvas.Top="128" Source="Image/BtnA.png" RenderTransformOrigin="0.006,0.571" Canvas.Left="260" />
+            <Image x:Name="BtnArriba" Visibility="Hidden" Height="290" Width="300" Canvas.Top="140" Source="Image/BtnArriba.png" RenderTransformOrigin="0.006,0.571" Canvas.Left="260"/>
+            <Image x:Name="BtnAbajo" Visibility="Hidden" Height="290" Width="300" Canvas.Top="140" Source="Image/BtnAbajo.png" RenderTransformOrigin="0.006,0.571" Canvas.Left="260"/>
+            <Image x:Name="BtnDerecha" Visibility="Hidden" Height="290" Width="300" Canvas.Top="140" Source="Image/BtnDerecha.png" RenderTransformOrigin="0.006,0.571" Canvas.Left="260"/>
+            <Image x:Name="BtnIzquierda" Visibility="Hidden" Height="290" Width="300" Canvas.Top="132" Source="Image/BtnIzquierda.png" RenderTransformOrigin="0.006,0.571" Canvas.Left="266" />
+
             <!-- Shown when a song is recognized -->
             <Image x:Name="LtFuego" Visibility="Hidden" Height="622" Width="824" Canvas.Top="373" Source="Image/LtFuego.png" RenderTransformOrigin="0.006,0.571" />
             <Image x:Name="LtAgua" Visibility="Hidden" Height="622" Width="824" Canvas.Top="373" Source="Image/LtAgua.png" RenderTransformOrigin="0.006,0.571" />
             <Image x:Name="LtSaria" Visibility="Hidden" Height="622" Width="824" Source="Image/LtSaria.png" RenderTransformOrigin="0.006,0.571" Canvas.Top="373" Canvas.Left="-2" />
             <Image x:Name="LtEpona" Visibility="Hidden" Height="622" Width="824" Source="Image/LtEpona.png" RenderTransformOrigin="0.006,0.571" Canvas.Top="373" />
+            <!-- Nuevas -->
+            <Image x:Name="LtBosque" Visibility="Hidden" Height="432" Width="570" Source="Image/LtBosque.png" RenderTransformOrigin="0.006,0.571" Canvas.Top="328" Canvas.Left="130" />
+            <Image x:Name="LtLuz" Visibility="Hidden" Height="432" Width="570" Source="Image/LtLuz.png" RenderTransformOrigin="0.006,0.571" Canvas.Top="328" Canvas.Left="128" />
+            <Image x:Name="LtEspiritu" Visibility="Hidden" Height="432" Width="570" Source="Image/LtEspiritu.png" RenderTransformOrigin="0.006,0.571" Canvas.Top="328" Canvas.Left="126" />
+            <Image x:Name="LtNana" Visibility="Hidden" Height="432" Width="570" Source="Image/LtNana.png" RenderTransformOrigin="0.006,0.571" Canvas.Top="328" Canvas.Left="118" />
+            <Image x:Name="LtSanacion" Visibility="Hidden" Height="432" Width="570" Source="Image/LtSanacion.png" RenderTransformOrigin="0.006,0.571" Canvas.Top="328" Canvas.Left="134" />
+            <Image x:Name="LtSol" Visibility="Hidden" Height="432" Width="570" Source="Image/LtSol.png" RenderTransformOrigin="0.006,0.571" Canvas.Top="328" Canvas.Left="144" />
+            <Image x:Name="LtTiempo" Visibility="Hidden" Height="432" Width="570" Source="Image/LtTiempo.png" RenderTransformOrigin="0.006,0.571" Canvas.Top="328" Canvas.Left="128" />
+            <Image x:Name="LtTormentas" Visibility="Hidden" Height="510" Width="703" Source="Image/LtTormentas.png" RenderTransformOrigin="0.006,0.571" Canvas.Top="290" Canvas.Left="39" />
         </Canvas>
 
         <!-- Microfono -->
@@ -58,7 +74,6 @@
 
         <!-- Reconocimiento de Notas a borrar -->
         <TextBox x:Name="lbl_Nota" HorizontalAlignment="Left" Height="43" Margin="671,547,-0.4,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="151"/>
-        <TextBlock x:Name="lbl_EO" HorizontalAlignment="Left" Margin="671,492,-0.4,0" TextWrapping="Wrap" Text="EO" VerticalAlignment="Top" Height="36" Width="151" Foreground="White" FontWeight="Bold"/>
         <TextBlock x:Name="lbl_Frecuencia" HorizontalAlignment="Left" Margin="671,450,-42.4,0" TextWrapping="Wrap" Text="0 Hz" VerticalAlignment="Top" Height="37" Width="193" FontSize="24" Foreground="#FFF3F3F3" FontWeight="Bold"/>
     </Grid>
 </Window>

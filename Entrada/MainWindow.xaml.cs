@@ -29,10 +29,10 @@ namespace Entrada
         string letraAnterior = "";
         string letraActual = "";
         bool play = false;
-        string epona = "w a d w a d ", saria = "s d a s d a ", zelda = "a w d a w d ", sun="d s w d s w ", storms="e s w e s w ", time="d e s d e s ", 
-            healing = "",
-            // 8 notas
-            fuego = "s e s e d s d s ";
+        string epona = "w a d w a d ", saria = "s d a s d a ", zelda = "a w d a w d ", sun = "d s w d s w ", storms = "e s w e s w ", time = "d e s d e s ",
+            healing = "a d s a d s ", spirit = "e s e d s e ", light = "w d w d a w ", forest ="e w a d a d ",
+            // Otra cantidad de notas
+            fuego = "s e s e d s d s ", agua = "e s d d a ";
 
         public MainWindow()
         {
@@ -68,64 +68,158 @@ namespace Entrada
                             LtFuego.Visibility = Visibility.Hidden;
                             LtAgua.Visibility = Visibility.Hidden;
                             LtSaria.Visibility = Visibility.Hidden;
-                            /*LtSun.Visibility = Visibility.Hidden;
-                            LtStorms.Visibility = Visibility.Hidden;
-                            LtTime.Visibility = Visibility.Hidden;*/
+                            LtSol.Visibility = Visibility.Hidden;
+                            LtTormentas.Visibility = Visibility.Hidden;
+                            LtTiempo.Visibility = Visibility.Hidden;
+                            LtSanacion.Visibility = Visibility.Hidden;
+                            LtNana.Visibility = Visibility.Hidden;
+                            LtLuz.Visibility = Visibility.Hidden;
+                            LtEspiritu.Visibility = Visibility.Hidden;
+                            LtBosque.Visibility = Visibility.Hidden;
                         }
                         else if (cancion == zelda)
                         {
-                            LtAgua.Visibility = Visibility.Visible;
+                            LtNana.Visibility = Visibility.Visible;
                             LtEscuchando.Visibility = Visibility.Hidden;
-                            LtFuego.Visibility = Visibility.Hidden;
                             LtEpona.Visibility = Visibility.Hidden;
+                            LtFuego.Visibility = Visibility.Hidden;
+                            LtAgua.Visibility = Visibility.Hidden;
                             LtSaria.Visibility = Visibility.Hidden;
-                           /* LtSun.Visibility = Visibility.Hidden;
-                            LtStorms.Visibility = Visibility.Hidden;
-                            LtTime.Visibility = Visibility.Hidden;*/
+                            LtSol.Visibility = Visibility.Hidden;
+                            LtTormentas.Visibility = Visibility.Hidden;
+                            LtTiempo.Visibility = Visibility.Hidden;
+                            LtSanacion.Visibility = Visibility.Hidden;
+                            LtLuz.Visibility = Visibility.Hidden;
+                            LtEspiritu.Visibility = Visibility.Hidden;
+                            LtBosque.Visibility = Visibility.Hidden;
                         }
                         else if (cancion == saria)
                         {
                             LtSaria.Visibility = Visibility.Visible;
                             LtEscuchando.Visibility = Visibility.Hidden;
-                            LtFuego.Visibility = Visibility.Hidden;
                             LtEpona.Visibility = Visibility.Hidden;
+                            LtFuego.Visibility = Visibility.Hidden;
                             LtAgua.Visibility = Visibility.Hidden;
-                           /* LtSun.Visibility = Visibility.Hidden;
-                            LtStorms.Visibility = Visibility.Hidden;
-                            LtTime.Visibility = Visibility.Hidden;*/
+                            LtSol.Visibility = Visibility.Hidden;
+                            LtTormentas.Visibility = Visibility.Hidden;
+                            LtTiempo.Visibility = Visibility.Hidden;
+                            LtSanacion.Visibility = Visibility.Hidden;
+                            LtNana.Visibility = Visibility.Hidden;
+                            LtLuz.Visibility = Visibility.Hidden;
+                            LtEspiritu.Visibility = Visibility.Hidden;
+                            LtBosque.Visibility = Visibility.Hidden;
                         }
                         else if (cancion == sun)
                         {
-                           // LtSun.Visibility = Visibility.Visible;
-                            LtSaria.Visibility = Visibility.Hidden;
+                            LtSol.Visibility = Visibility.Visible;
                             LtEscuchando.Visibility = Visibility.Hidden;
-                            LtFuego.Visibility = Visibility.Hidden;
                             LtEpona.Visibility = Visibility.Hidden;
+                            LtFuego.Visibility = Visibility.Hidden;
                             LtAgua.Visibility = Visibility.Hidden;
-                          /*  LtStorms.Visibility = Visibility.Hidden;
-                            LtTime.Visibility = Visibility.Hidden;*/
+                            LtSaria.Visibility = Visibility.Hidden;
+                            LtTormentas.Visibility = Visibility.Hidden;
+                            LtTiempo.Visibility = Visibility.Hidden;
+                            LtSanacion.Visibility = Visibility.Hidden;
+                            LtNana.Visibility = Visibility.Hidden;
+                            LtLuz.Visibility = Visibility.Hidden;
+                            LtEspiritu.Visibility = Visibility.Hidden;
+                            LtBosque.Visibility = Visibility.Hidden;
                         }
                         else if (cancion == storms)
                         {
-                          //  LtStorms.Visibility = Visibility.Visible;
-                            LtSaria.Visibility = Visibility.Hidden;
+                            LtTormentas.Visibility = Visibility.Visible;
                             LtEscuchando.Visibility = Visibility.Hidden;
-                            LtFuego.Visibility = Visibility.Hidden;
                             LtEpona.Visibility = Visibility.Hidden;
+                            LtFuego.Visibility = Visibility.Hidden;
                             LtAgua.Visibility = Visibility.Hidden;
-                          /*  LtSun.Visibility = Visibility.Hidden;
-                            LtTime.Visibility = Visibility.Hidden;*/
+                            LtSaria.Visibility = Visibility.Hidden;
+                            LtSol.Visibility = Visibility.Hidden;
+                            LtTiempo.Visibility = Visibility.Hidden;
+                            LtSanacion.Visibility = Visibility.Hidden;
+                            LtNana.Visibility = Visibility.Hidden;
+                            LtLuz.Visibility = Visibility.Hidden;
+                            LtEspiritu.Visibility = Visibility.Hidden;
+                            LtBosque.Visibility = Visibility.Hidden;
                         }
                         else if (cancion == time)
                         {
-                            //LtTime.Visibility = Visibility.Visible;
-                            LtSaria.Visibility = Visibility.Hidden;
+                            LtTiempo.Visibility = Visibility.Visible;
                             LtEscuchando.Visibility = Visibility.Hidden;
-                            LtFuego.Visibility = Visibility.Hidden;
                             LtEpona.Visibility = Visibility.Hidden;
+                            LtFuego.Visibility = Visibility.Hidden;
                             LtAgua.Visibility = Visibility.Hidden;
-                        /*    LtSun.Visibility = Visibility.Hidden;
-                            LtStorms.Visibility = Visibility.Hidden;*/
+                            LtSaria.Visibility = Visibility.Hidden;
+                            LtSol.Visibility = Visibility.Hidden;
+                            LtTormentas.Visibility = Visibility.Hidden;
+                            LtSanacion.Visibility = Visibility.Hidden;
+                            LtNana.Visibility = Visibility.Hidden;
+                            LtLuz.Visibility = Visibility.Hidden;
+                            LtEspiritu.Visibility = Visibility.Hidden;
+                            LtBosque.Visibility = Visibility.Hidden;
+                        }
+                        else if (cancion == light)
+                        {
+                            LtLuz.Visibility = Visibility.Visible;
+                            LtEscuchando.Visibility = Visibility.Hidden;
+                            LtEpona.Visibility = Visibility.Hidden;
+                            LtFuego.Visibility = Visibility.Hidden;
+                            LtAgua.Visibility = Visibility.Hidden;
+                            LtSaria.Visibility = Visibility.Hidden;
+                            LtSol.Visibility = Visibility.Hidden;
+                            LtTormentas.Visibility = Visibility.Hidden;
+                            LtTiempo.Visibility = Visibility.Hidden;
+                            LtSanacion.Visibility = Visibility.Hidden;
+                            LtNana.Visibility = Visibility.Hidden;
+                            LtEspiritu.Visibility = Visibility.Hidden;
+                            LtBosque.Visibility = Visibility.Hidden;
+                        }
+                        else if (cancion == spirit)
+                        {
+                            LtEspiritu.Visibility = Visibility.Visible;
+                            LtEscuchando.Visibility = Visibility.Hidden;
+                            LtEpona.Visibility = Visibility.Hidden;
+                            LtFuego.Visibility = Visibility.Hidden;
+                            LtAgua.Visibility = Visibility.Hidden;
+                            LtSaria.Visibility = Visibility.Hidden;
+                            LtSol.Visibility = Visibility.Hidden;
+                            LtTormentas.Visibility = Visibility.Hidden;
+                            LtTiempo.Visibility = Visibility.Hidden;
+                            LtSanacion.Visibility = Visibility.Hidden;
+                            LtNana.Visibility = Visibility.Hidden;
+                            LtLuz.Visibility = Visibility.Hidden;
+                            LtBosque.Visibility = Visibility.Hidden;
+                        }
+                        else if (cancion == healing)
+                        {
+                            LtSanacion.Visibility = Visibility.Visible;
+                            LtEscuchando.Visibility = Visibility.Hidden;
+                            LtEpona.Visibility = Visibility.Hidden;
+                            LtFuego.Visibility = Visibility.Hidden;
+                            LtAgua.Visibility = Visibility.Hidden;
+                            LtSaria.Visibility = Visibility.Hidden;
+                            LtSol.Visibility = Visibility.Hidden;
+                            LtTormentas.Visibility = Visibility.Hidden;
+                            LtTiempo.Visibility = Visibility.Hidden;
+                            LtNana.Visibility = Visibility.Hidden;
+                            LtLuz.Visibility = Visibility.Hidden;
+                            LtEspiritu.Visibility = Visibility.Hidden;
+                            LtBosque.Visibility = Visibility.Hidden;
+                        }
+                        else if (cancion == forest)
+                        {
+                            LtBosque.Visibility = Visibility.Visible;
+                            LtSanacion.Visibility = Visibility.Hidden;
+                            LtEscuchando.Visibility = Visibility.Hidden;
+                            LtEpona.Visibility = Visibility.Hidden;
+                            LtFuego.Visibility = Visibility.Hidden;
+                            LtAgua.Visibility = Visibility.Hidden;
+                            LtSaria.Visibility = Visibility.Hidden;
+                            LtSol.Visibility = Visibility.Hidden;
+                            LtTormentas.Visibility = Visibility.Hidden;
+                            LtTiempo.Visibility = Visibility.Hidden;
+                            LtNana.Visibility = Visibility.Hidden;
+                            LtLuz.Visibility = Visibility.Hidden;
+                            LtEspiritu.Visibility = Visibility.Hidden;
                         }
                     }
                 }
@@ -239,22 +333,52 @@ namespace Entrada
                 if (frecuenciaFundamental >= 1160 && frecuenciaFundamental <= 1192)
                 {
                     letraActual = "w ";
+                    BtnArriba.Visibility = Visibility.Visible;
+                    Ocarina.Visibility = Visibility.Hidden;
+                    BtnA.Visibility = Visibility.Hidden;
+                    BtnAbajo.Visibility = Visibility.Hidden;
+                    BtnDerecha.Visibility = Visibility.Hidden;
+                    BtnIzquierda.Visibility = Visibility.Hidden;
                 }
                 else if (frecuenciaFundamental >= 976 && frecuenciaFundamental <= 998)
                 {
                     letraActual = "a ";
+                    BtnIzquierda.Visibility = Visibility.Visible;
+                    BtnArriba.Visibility = Visibility.Hidden;
+                    Ocarina.Visibility = Visibility.Hidden;
+                    BtnA.Visibility = Visibility.Hidden;
+                    BtnAbajo.Visibility = Visibility.Hidden;
+                    BtnDerecha.Visibility = Visibility.Hidden;
                 }
                 else if (frecuenciaFundamental >= 872 && frecuenciaFundamental <= 891)
                 {
                     letraActual = "d ";
+                    BtnDerecha.Visibility = Visibility.Visible;
+                    BtnArriba.Visibility = Visibility.Hidden;
+                    Ocarina.Visibility = Visibility.Hidden;
+                    BtnA.Visibility = Visibility.Hidden;
+                    BtnAbajo.Visibility = Visibility.Hidden;
+                    BtnIzquierda.Visibility = Visibility.Hidden;
                 }
                 else if (frecuenciaFundamental >= 693 && frecuenciaFundamental <= 713)
                 {
                     letraActual = "s ";
+                    BtnAbajo.Visibility = Visibility.Visible;
+                    BtnArriba.Visibility = Visibility.Hidden;
+                    Ocarina.Visibility = Visibility.Hidden;
+                    BtnA.Visibility = Visibility.Hidden;
+                    BtnDerecha.Visibility = Visibility.Hidden;
+                    BtnIzquierda.Visibility = Visibility.Hidden;
                 }
                 else if (frecuenciaFundamental >= 583 && frecuenciaFundamental <= 595)
                 {
                     letraActual = "e ";
+                    BtnA.Visibility = Visibility.Visible;
+                    BtnArriba.Visibility = Visibility.Hidden;
+                    Ocarina.Visibility = Visibility.Hidden;
+                    BtnAbajo.Visibility = Visibility.Hidden;
+                    BtnDerecha.Visibility = Visibility.Hidden;
+                    BtnIzquierda.Visibility = Visibility.Hidden;
                 }
                 else
                     letraActual = "";

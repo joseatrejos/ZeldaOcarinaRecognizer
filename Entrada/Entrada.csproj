@@ -107,6 +107,12 @@
     <Resource Include="Image\Ocarina.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Image\LtTormentas.png" />
+    <Resource Include="Image\LtLuz.png" />
+    <Resource Include="Image\LtNana.png" />
+    <Resource Include="Image\LtSanacion.png" />
+    <Resource Include="Image\LtSol.png" />
+    <Resource Include="Image\LtTiempo.png" />
     <Resource Include="Image\LtSaria.png" />
     <Resource Include="Image\Notas.png" />
     <Resource Include="Image\Fondo.png" />
@@ -114,6 +120,13 @@
     <Resource Include="Image\LtEpona.png" />
     <Resource Include="Image\LtEscuchando.png" />
     <Resource Include="Image\LtFuego.png" />
+    <Resource Include="Image\BtnA.png" />
+    <Resource Include="Image\BtnAbajo.png" />
+    <Resource Include="Image\BtnArriba.png" />
+    <Resource Include="Image\BtnDerecha.png" />
+    <Resource Include="Image\BtnIzquierda.png" />
+    <Resource Include="Image\LtBosque.png" />
+    <Resource Include="Image\LtEspiritu.png" />
     <Content Include="Image\LtReconocer.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
