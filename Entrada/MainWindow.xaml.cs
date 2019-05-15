@@ -29,6 +29,10 @@ namespace Entrada
         string letraAnterior = "";
         string letraActual = "";
         bool play = false;
+        string epona = "w a d w a d ", saria = "s d a s d a ", zelda = "a w d a w d ", sun="d s w d s w ", storms="e s w e s w ", time="d e s d e s ", 
+            healing = "",
+            // 8 notas
+            fuego = "s e s e d s d s ";
 
         public MainWindow()
         {
@@ -49,16 +53,80 @@ namespace Entrada
             if (letraActual != "" && letraActual == letraAnterior)
             {
                 // Evaluar si ya pasó un segundo
-                if (cronometro.ElapsedMilliseconds >= 50)
+                if (cronometro.ElapsedMilliseconds >= 100)
                 {
                     lbl_Nota.AppendText(letraActual + "");
                     letraActual = "";
                     cronometro.Restart();
-                    if(lbl_Nota.Text.Length >= 4)
+                    if (lbl_Nota.Text.Length >= 12)
                     {
-                        string eo = lbl_Nota.Text.Substring(lbl_Nota.Text.Length - 4, 4);
-                        if (eo == "E O ")
-                            lbl_EO.Visibility = Visibility.Visible;
+                        string cancion = lbl_Nota.Text.Substring(lbl_Nota.Text.Length - 12, 12);
+                        if (cancion == epona)
+                        {
+                            LtEpona.Visibility = Visibility.Visible;
+                            LtEscuchando.Visibility = Visibility.Hidden;
+                            LtFuego.Visibility = Visibility.Hidden;
+                            LtAgua.Visibility = Visibility.Hidden;
+                            LtSaria.Visibility = Visibility.Hidden;
+                            /*LtSun.Visibility = Visibility.Hidden;
+                            LtStorms.Visibility = Visibility.Hidden;
+                            LtTime.Visibility = Visibility.Hidden;*/
+                        }
+                        else if (cancion == zelda)
+                        {
+                            LtAgua.Visibility = Visibility.Visible;
+                            LtEscuchando.Visibility = Visibility.Hidden;
+                            LtFuego.Visibility = Visibility.Hidden;
+                            LtEpona.Visibility = Visibility.Hidden;
+                            LtSaria.Visibility = Visibility.Hidden;
+                           /* LtSun.Visibility = Visibility.Hidden;
+                            LtStorms.Visibility = Visibility.Hidden;
+                            LtTime.Visibility = Visibility.Hidden;*/
+                        }
+                        else if (cancion == saria)
+                        {
+                            LtSaria.Visibility = Visibility.Visible;
+                            LtEscuchando.Visibility = Visibility.Hidden;
+                            LtFuego.Visibility = Visibility.Hidden;
+                            LtEpona.Visibility = Visibility.Hidden;
+                            LtAgua.Visibility = Visibility.Hidden;
+                           /* LtSun.Visibility = Visibility.Hidden;
+                            LtStorms.Visibility = Visibility.Hidden;
+                            LtTime.Visibility = Visibility.Hidden;*/
+                        }
+                        else if (cancion == sun)
+                        {
+                           // LtSun.Visibility = Visibility.Visible;
+                            LtSaria.Visibility = Visibility.Hidden;
+                            LtEscuchando.Visibility = Visibility.Hidden;
+                            LtFuego.Visibility = Visibility.Hidden;
+                            LtEpona.Visibility = Visibility.Hidden;
+                            LtAgua.Visibility = Visibility.Hidden;
+                          /*  LtStorms.Visibility = Visibility.Hidden;
+                            LtTime.Visibility = Visibility.Hidden;*/
+                        }
+                        else if (cancion == storms)
+                        {
+                          //  LtStorms.Visibility = Visibility.Visible;
+                            LtSaria.Visibility = Visibility.Hidden;
+                            LtEscuchando.Visibility = Visibility.Hidden;
+                            LtFuego.Visibility = Visibility.Hidden;
+                            LtEpona.Visibility = Visibility.Hidden;
+                            LtAgua.Visibility = Visibility.Hidden;
+                          /*  LtSun.Visibility = Visibility.Hidden;
+                            LtTime.Visibility = Visibility.Hidden;*/
+                        }
+                        else if (cancion == time)
+                        {
+                            //LtTime.Visibility = Visibility.Visible;
+                            LtSaria.Visibility = Visibility.Hidden;
+                            LtEscuchando.Visibility = Visibility.Hidden;
+                            LtFuego.Visibility = Visibility.Hidden;
+                            LtEpona.Visibility = Visibility.Hidden;
+                            LtAgua.Visibility = Visibility.Hidden;
+                        /*    LtSun.Visibility = Visibility.Hidden;
+                            LtStorms.Visibility = Visibility.Hidden;*/
+                        }
                     }
                 }
             }
@@ -168,25 +236,25 @@ namespace Entrada
 
                 letraAnterior = letraActual;
 
-                if (frecuenciaFundamental >= 1170 && frecuenciaFundamental <= 1195)
+                if (frecuenciaFundamental >= 1160 && frecuenciaFundamental <= 1192)
                 {
-                    letraActual = "Arriba ";
+                    letraActual = "w ";
                 }
-                else if (frecuenciaFundamental >= 965 && frecuenciaFundamental <= 1005)
+                else if (frecuenciaFundamental >= 976 && frecuenciaFundamental <= 998)
                 {
-                    letraActual = "Izquierda ";
+                    letraActual = "a ";
                 }
-                else if (frecuenciaFundamental >= 865 && frecuenciaFundamental <= 895)
+                else if (frecuenciaFundamental >= 872 && frecuenciaFundamental <= 891)
                 {
-                    letraActual = "Derecha ";
+                    letraActual = "d ";
                 }
-                else if (frecuenciaFundamental >= 685 && frecuenciaFundamental <= 710)
+                else if (frecuenciaFundamental >= 693 && frecuenciaFundamental <= 713)
                 {
-                    letraActual = "Abajo ";
+                    letraActual = "s ";
                 }
-                else if (frecuenciaFundamental >= 575 && frecuenciaFundamental <= 600)
+                else if (frecuenciaFundamental >= 583 && frecuenciaFundamental <= 595)
                 {
-                    letraActual = "A ";
+                    letraActual = "e ";
                 }
                 else
                     letraActual = "";
