@@ -282,6 +282,59 @@ namespace Entrada
                             */
                         }
                     }
+                    if (lbl_Nota.Text.Length >= 16)
+                    {
+                        string cancion = lbl_Nota.Text.Substring(lbl_Nota.Text.Length - 16, 16);
+                        if (cancion == fuego)
+                        {
+                            LtFuego.Visibility = Visibility.Visible;
+                            LtEpona.Visibility = Visibility.Hidden;
+                            LtEscuchando.Visibility = Visibility.Hidden;
+                            LtAgua.Visibility = Visibility.Hidden;
+                            LtSaria.Visibility = Visibility.Hidden;
+                            LtSol.Visibility = Visibility.Hidden;
+                            LtTormentas.Visibility = Visibility.Hidden;
+                            LtTiempo.Visibility = Visibility.Hidden;
+                            LtSanacion.Visibility = Visibility.Hidden;
+                            LtNana.Visibility = Visibility.Hidden;
+                            LtLuz.Visibility = Visibility.Hidden;
+                            LtEspiritu.Visibility = Visibility.Hidden;
+                            LtBosque.Visibility = Visibility.Hidden;
+
+                            /*
+                            Ocarina.Visibility = Visibility.Hidden;
+                            Notas.Visibility = Visibility.Hidden;
+                            VidEpona.Visibility = Visibility.Hidden; // Esto seguro será una función pero mínimo ahí está el nombre jeje
+                            */
+                        }
+                    }
+                    if (lbl_Nota.Text.Length >= 10)
+                    {
+                        string cancion = lbl_Nota.Text.Substring(lbl_Nota.Text.Length - 10, 10);
+                        if (cancion == agua)
+                        {
+                            LtAgua.Visibility = Visibility.Visible;
+                            LtFuego.Visibility = Visibility.Hidden;
+                            LtEpona.Visibility = Visibility.Hidden;
+                            LtEscuchando.Visibility = Visibility.Hidden;
+                            LtSaria.Visibility = Visibility.Hidden;
+                            LtSol.Visibility = Visibility.Hidden;
+                            LtTormentas.Visibility = Visibility.Hidden;
+                            LtTiempo.Visibility = Visibility.Hidden;
+                            LtSanacion.Visibility = Visibility.Hidden;
+                            LtNana.Visibility = Visibility.Hidden;
+                            LtLuz.Visibility = Visibility.Hidden;
+                            LtEspiritu.Visibility = Visibility.Hidden;
+                            LtBosque.Visibility = Visibility.Hidden;
+
+                            /*
+                            Ocarina.Visibility = Visibility.Hidden;
+                            Notas.Visibility = Visibility.Hidden;
+                            VidEpona.Visibility = Visibility.Hidden; // Esto seguro será una función pero mínimo ahí está el nombre jeje
+                            */
+                        }
+                    }
+
                 }
             }
             else
@@ -453,14 +506,22 @@ namespace Entrada
             {
                 waveIn.StopRecording();
             }
-            btn_Reconocer.Visibility = Visibility.Visible;
+             btn_Reconocer.Visibility = Visibility.Visible;
+            LtBosque.Visibility = Visibility.Hidden;
+            LtSanacion.Visibility = Visibility.Hidden;
             LtEscuchando.Visibility = Visibility.Hidden;
+            LtEpona.Visibility = Visibility.Hidden;
             LtFuego.Visibility = Visibility.Hidden;
             LtAgua.Visibility = Visibility.Hidden;
-            LtEpona.Visibility = Visibility.Hidden;
             LtSaria.Visibility = Visibility.Hidden;
-            Notas.Visibility = Visibility.Hidden;
+            LtSol.Visibility = Visibility.Hidden;
+            LtTormentas.Visibility = Visibility.Hidden;
+            LtTiempo.Visibility = Visibility.Hidden;
+            LtNana.Visibility = Visibility.Hidden;
+            LtLuz.Visibility = Visibility.Hidden;
+            LtEspiritu.Visibility = Visibility.Hidden;
             lbl_Nota.Clear();
+            lbl_Frecuencia.Text = "0 Hz";
         }
     }
 }

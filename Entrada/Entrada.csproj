@@ -132,7 +132,9 @@
     <Resource Include="Image\BtnIzquierda.png" />
     <Resource Include="Image\LtBosque.png" />
     <Resource Include="Image\LtEspiritu.png" />
-    <Content Include="Image\LtReconocer.png" />
+    <Content Include="Image\LtReconocer.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
