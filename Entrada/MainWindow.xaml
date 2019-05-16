@@ -11,11 +11,11 @@
         <Canvas x:Name="canvas" HorizontalAlignment="Left" Height="617" Margin="0,0,-0.4,-0.2" VerticalAlignment="Top" Width="822">
             <!-- Always Shown -->
             <Image x:Name="Fondo" Visibility="Visible" Height="1020" Width="1100" Canvas.Top="-188" Source="Image/Fondo.png" RenderTransformOrigin="0.006,0.571" Canvas.Left="-140" />
-            <Image x:Name="Ocarina" Visibility="Visible" Height="546" Width="723" Source="Image/Ocarina.png" RenderTransformOrigin="0.006,0.571" Canvas.Top="25" Canvas.Left="47" />
+            <Image x:Name="Ocarina" Visibility="Hidden" Height="546" Width="723" Source="Image/Ocarina.png" RenderTransformOrigin="0.006,0.571" Canvas.Top="25" Canvas.Left="47" />
 
             <!-- Shown at Playback -->
             <Image x:Name="Notas" Visibility="Hidden" Height="654" Width="868" Source="Image/Notas.png" RenderTransformOrigin="0.006,0.571" Canvas.Top="-33" Canvas.Left="-44" />
-            <Image x:Name="LtEscuchando" Visibility="Hidden" Height="266" Width="353" Source="Image/LtEscuchando.png" RenderTransformOrigin="0.006,0.571" Canvas.Top="430" Canvas.Left="225" />
+            <Image x:Name="LtEscuchando" Visibility="Hidden" Height="371" Width="500" Source="Image/LtEscuchando.png" RenderTransformOrigin="0.006,0.571" Canvas.Top="373" Canvas.Left="150" />
 
             <!-- Shown when a note is recognized -->
             <Image x:Name="BtnA" Visibility="Hidden" Height="290" Width="300" Canvas.Top="128" Source="Image/BtnA.png" RenderTransformOrigin="0.006,0.571" Canvas.Left="260" />
@@ -53,11 +53,18 @@
         <ComboBox x:Name="cmb_Dispositivos" HorizontalAlignment="Left" Margin="22,58,0,0" VerticalAlignment="Top" Width="178" SelectedIndex="0"/>
 
         <!-- Botones Play y Stop -->
-        <Button x:Name="btn_Reconocer" Visibility="Visible" HorizontalAlignment="Left" Margin="170,501,0,0" VerticalAlignment="Top" Width="465" RenderTransformOrigin="0.493,0.5" Click="btn_Iniciar_Click" Height="110">
+        <Button x:Name="btn_Reconocer" BorderThickness="0" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Visibility="Visible" HorizontalAlignment="Left" Margin="178,501,0,0" VerticalAlignment="Top" Width="465" RenderTransformOrigin="0.493,0.5" Click="btn_Iniciar_Click" Height="110">
             <DockPanel>
                 <Image Source="Image/LtReconocer.png" Height="90" Width="454"/>
             </DockPanel>
         </Button>
+        <Button x:Name="btn_Ocarina" Visibility="Visible" BorderThickness="0" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" HorizontalAlignment="Left" Margin="202,144,0,0" VerticalAlignment="Top" Width="429" RenderTransformOrigin="0.493,0.5" Click="btn_Iniciar_Click" Height="270">
+            <DockPanel>
+                <Image x:Name="BtnOcarina" Visibility="Visible" Height="222" Width="291" Source="Image/BtnOcarina.png" RenderTransformOrigin="0.006,0.571"/>
+            </DockPanel>
+        </Button>
+
+
         <Button x:Name="btn_Detener" Content="Detener" HorizontalAlignment="Left" Margin="715,15,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.493,0.5" Click="btn_Detener_Click"/>
 
         <!-- Slider que guarda la frecuencia -->
@@ -73,10 +80,10 @@
         </Slider>
 
         <!-- Reconocimiento de Notas a borrar -->
-        <TextBox x:Name="lbl_Nota" HorizontalAlignment="Left" Height="43" Margin="671,547,-0.4,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="151"/>
+        <TextBox x:Name="lbl_Nota" HorizontalAlignment="Left" Height="75" Margin="671,520,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134"/>
         <TextBlock x:Name="lbl_Frecuencia" HorizontalAlignment="Left" Margin="671,450,-42.4,0" TextWrapping="Wrap" Text="0 Hz" VerticalAlignment="Top" Height="37" Width="193" FontSize="24" Foreground="#FFF3F3F3" FontWeight="Bold"/>
-        
-        <!-- Videos -->
+
+        <!-- Videos >
         <MediaElement x:Name="VidEpona" Source="Video/Epona.mp4" Margin="170,105,192,177.2" />
         <MediaElement x:Name="VidForest" Source="Video/Forest.mp4" Margin="170,105,192,177.2" />
         <MediaElement x:Name="VidHealing" Source="Video/Healing.mp4" Margin="170,105,192,177.2" />
@@ -86,7 +93,7 @@
         <MediaElement x:Name="VidStorms" Source="Video/Storms.mp4" Margin="170,105,192,177.2" />
         <MediaElement x:Name="VidSun" Source="Video/Sun.mp4" Margin="170,105,192,177.2" />
         <MediaElement x:Name="VidTime" Source="Video/Time.mp4" Margin="170,105,192,177.2" />
-        <MediaElement x:Name="VidZelda" Source="Video/Zelda.mp4" Margin="170,105,192,177.2" />
+        <MediaElement x:Name="VidZelda" Source="Video/Zelda.mp4" Margin="170,105,192,177.2" /-->
     </Grid>
 </Window>
     

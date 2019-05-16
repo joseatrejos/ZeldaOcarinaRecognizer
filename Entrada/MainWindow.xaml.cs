@@ -361,6 +361,8 @@ namespace Entrada
             play = true;
 
             btn_Reconocer.Visibility = Visibility.Hidden;
+            btn_Ocarina.Visibility = Visibility.Hidden;
+            Ocarina.Visibility = Visibility.Visible;
             LtEscuchando.Visibility = Visibility.Visible;
             Notas.Visibility = Visibility.Visible;
 
@@ -448,6 +450,7 @@ namespace Entrada
                     letraActual = "w ";
                     BtnArriba.Visibility = Visibility.Visible;
                     Ocarina.Visibility = Visibility.Hidden;
+                    btn_Ocarina.Visibility = Visibility.Hidden;
                     BtnA.Visibility = Visibility.Hidden;
                     BtnAbajo.Visibility = Visibility.Hidden;
                     BtnDerecha.Visibility = Visibility.Hidden;
@@ -459,6 +462,7 @@ namespace Entrada
                     BtnIzquierda.Visibility = Visibility.Visible;
                     BtnArriba.Visibility = Visibility.Hidden;
                     Ocarina.Visibility = Visibility.Hidden;
+                    btn_Ocarina.Visibility = Visibility.Hidden;
                     BtnA.Visibility = Visibility.Hidden;
                     BtnAbajo.Visibility = Visibility.Hidden;
                     BtnDerecha.Visibility = Visibility.Hidden;
@@ -469,6 +473,7 @@ namespace Entrada
                     BtnDerecha.Visibility = Visibility.Visible;
                     BtnArriba.Visibility = Visibility.Hidden;
                     Ocarina.Visibility = Visibility.Hidden;
+                    btn_Ocarina.Visibility = Visibility.Hidden;
                     BtnA.Visibility = Visibility.Hidden;
                     BtnAbajo.Visibility = Visibility.Hidden;
                     BtnIzquierda.Visibility = Visibility.Hidden;
@@ -479,6 +484,7 @@ namespace Entrada
                     BtnAbajo.Visibility = Visibility.Visible;
                     BtnArriba.Visibility = Visibility.Hidden;
                     Ocarina.Visibility = Visibility.Hidden;
+                    btn_Ocarina.Visibility = Visibility.Hidden;
                     BtnA.Visibility = Visibility.Hidden;
                     BtnDerecha.Visibility = Visibility.Hidden;
                     BtnIzquierda.Visibility = Visibility.Hidden;
@@ -489,6 +495,7 @@ namespace Entrada
                     BtnA.Visibility = Visibility.Visible;
                     BtnArriba.Visibility = Visibility.Hidden;
                     Ocarina.Visibility = Visibility.Hidden;
+                    btn_Ocarina.Visibility = Visibility.Hidden;
                     BtnAbajo.Visibility = Visibility.Hidden;
                     BtnDerecha.Visibility = Visibility.Hidden;
                     BtnIzquierda.Visibility = Visibility.Hidden;
@@ -506,7 +513,15 @@ namespace Entrada
             {
                 waveIn.StopRecording();
             }
-             btn_Reconocer.Visibility = Visibility.Visible;
+            btn_Reconocer.Visibility = Visibility.Visible;
+            btn_Ocarina.Visibility = Visibility.Visible;
+            BtnA.Visibility = Visibility.Hidden;
+            BtnArriba.Visibility = Visibility.Hidden;
+            BtnAbajo.Visibility = Visibility.Hidden;
+            BtnDerecha.Visibility = Visibility.Hidden;
+            BtnIzquierda.Visibility = Visibility.Hidden;
+            Notas.Visibility = Visibility.Hidden;
+            Ocarina.Visibility = Visibility.Hidden;
             LtBosque.Visibility = Visibility.Hidden;
             LtSanacion.Visibility = Visibility.Hidden;
             LtEscuchando.Visibility = Visibility.Hidden;
