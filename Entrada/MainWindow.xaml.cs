@@ -187,6 +187,10 @@ namespace Entrada
                         string cancion = lbl_Nota.Text.Substring(lbl_Nota.Text.Length - 16, 16);
                         if (cancion == fuego)
                         {
+                            // Video Playback
+                            VidFire.Source = new Uri(@"Video\Fire.wmv", UriKind.Relative);
+                            VidFire.Play();
+
                             ocultar_Todo();
                             VidFire.Visibility = Visibility.Visible;
                             LtFuego.Visibility = Visibility.Visible;
@@ -197,6 +201,10 @@ namespace Entrada
                         string cancion = lbl_Nota.Text.Substring(lbl_Nota.Text.Length - 10, 10);
                         if (cancion == agua)
                         {
+                            // Video Playback
+                            VidWater.Source = new Uri(@"Video\Water.wmv", UriKind.Relative);
+                            VidWater.Play();
+
                             ocultar_Todo();
                             VidWater.Visibility = Visibility.Visible;
                             LtAgua.Visibility = Visibility.Visible;
