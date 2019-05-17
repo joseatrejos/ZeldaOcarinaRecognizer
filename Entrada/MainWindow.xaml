@@ -91,51 +91,7 @@
 
         <!-- Videos -->
         <StackPanel Margin="9,10,-9,-10" Grid.RowSpan="2" Grid.ColumnSpan="3">
-            <MediaElement Name="VidEpona" Visibility="Hidden" Source="Video/Epona.wmv" Margin="43,105,62,177.2" Height="362" LoadedBehavior="Manual" MediaEnded="Vid_MediaEnded"/>
-        </StackPanel>
-
-        <StackPanel Margin="-1,12,1,-12" Grid.RowSpan="2" Grid.ColumnSpan="3">
-            <MediaElement Name="VidForest" Visibility="Hidden" Source="Video/Forest.wmv" Margin="37,105,32,177.2" Height="356" LoadedBehavior="Manual" MediaEnded="Vid_MediaEnded"/>
-        </StackPanel>
-
-        <StackPanel Margin="-13,-48,13,48" Grid.RowSpan="2" Grid.ColumnSpan="3">
-            <MediaElement Name="VidHealing" Visibility="Hidden" Source="Video/Healing.wmv" Margin="118,105,78,177.2" LoadedBehavior="Manual" MediaEnded="Vid_MediaEnded" Height="481"/>
-        </StackPanel>
-
-        <StackPanel Margin="-67,-34,15,6" Grid.RowSpan="2" Grid.ColumnSpan="2">
-            <MediaElement Name="VidLight" Visibility="Hidden" Source="Video/Light.wmv" Margin="174,105,65,177.2" LoadedBehavior="Manual" MediaEnded="Vid_MediaEnded" Height="449"/>
-        </StackPanel>
-
-        <StackPanel Margin="-13,-42,13,42" Grid.RowSpan="2" Grid.ColumnSpan="3">
-            <MediaElement Name="VidSaria" Visibility="Hidden" Source="Video/Saria.wmv" Margin="124,105,86,177.2" LoadedBehavior="Manual" MediaEnded="Vid_MediaEnded" Height="471"/>
-        </StackPanel>
-
-        <StackPanel Margin="-69,-44,53,44" Grid.RowSpan="2" Grid.ColumnSpan="2">
-            <MediaElement Name="VidSpirit" Visibility="Hidden" Source="Video/Spirit.wmv" Margin="180,105,32,177.2" LoadedBehavior="Manual" MediaEnded="Vid_MediaEnded" Height="469"/>
-        </StackPanel>
-
-        <StackPanel Margin="-71,-42,55,42" Grid.RowSpan="2" Grid.ColumnSpan="2">
-            <MediaElement Name="VidStorms" Visibility="Hidden" Source="Video/Storms.wmv" Margin="172,105,33,177.2" LoadedBehavior="Manual" MediaEnded="Vid_MediaEnded" Height="474"/>
-        </StackPanel>
-
-        <StackPanel Margin="-75,-48,59,48" Grid.RowSpan="2" Grid.ColumnSpan="2">
-            <MediaElement Name="VidSun" Visibility="Hidden" Source="Video/Sun.wmv" Margin="170,105,31,177.2" LoadedBehavior="Manual" MediaEnded="Vid_MediaEnded" Height="477"/>
-        </StackPanel>
-
-        <StackPanel Margin="-71,-46,55,46" Grid.RowSpan="2" Grid.ColumnSpan="2">
-            <MediaElement Name="VidTime" Visibility="Hidden" Source="Video/Time.wmv" Margin="170,105,42,177.2" LoadedBehavior="Manual" MediaEnded="Vid_MediaEnded" Height="469"/>
-        </StackPanel>
-
-        <StackPanel Margin="-22,-45,6,45" Grid.RowSpan="2" Grid.ColumnSpan="2">
-            <MediaElement Name="VidZelda" Visibility="Hidden" Source="Video/Zelda.wmv" Margin="120,105,90,177.2" LoadedBehavior="Manual" MediaEnded="Vid_MediaEnded" Height="470"/>
-        </StackPanel>
-
-        <StackPanel Margin="-35,14,19,-14" Grid.RowSpan="2" Grid.ColumnSpan="2">
-            <MediaElement Name="VidFire" Visibility="Hidden" Source="Video/Fire.wmv" Margin="140,105,78,177.2" LoadedBehavior="Manual" MediaEnded="Vid_MediaEnded" Height="355"/>
-        </StackPanel>
-
-        <StackPanel Margin="-12,15,12,-15" Grid.RowSpan="2" Grid.ColumnSpan="3">
-            <MediaElement Name="VidWater" Visibility="Hidden" Source="Video/Water.wmv" Margin="112,105,85,177.2" LoadedBehavior="Manual" MediaEnded="Vid_MediaEnded" Height="355"/>
+            <MediaElement Name="Videos" Visibility="Hidden" Margin="43,105,62,177.2" Height="362" LoadedBehavior="Manual" MediaEnded="Vid_MediaEnded"/>
         </StackPanel>
     </Grid>
 </Window>

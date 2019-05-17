@@ -28,6 +28,7 @@ namespace Entrada
         DispatcherTimer timer;
         string letraAnterior = "";
         string letraActual = "";
+        string silencio = "";
         bool play = false;
         string epona = "w a d w a d ", saria = "s d a s d a ", zelda = "a w d a w d ", sun = "d s w d s w ", storms = "e s w e s w ", 
             time = "d e s d e s ", healing = "a d s a d s ", spirit = "e s e d s e ", light = "w d w d a w ", forest ="e w a d a d ",
@@ -62,7 +63,7 @@ namespace Entrada
             if (letraActual != "" && letraActual == letraAnterior)
             {
                 // Evaluar si ya pasó un segundo
-                if (cronometro.ElapsedMilliseconds >= 100)
+                if (cronometro.ElapsedMilliseconds >= 50)
                 {
                     lbl_Nota.AppendText(letraActual + "");
                     letraActual = "";
@@ -73,113 +74,106 @@ namespace Entrada
                         if (cancion == epona)
                         {
                             // Video Playback
-                            VidEpona.Source = new Uri(@"Video\epona.wmv", UriKind.Relative);
-                            VidEpona.Play();    
+                            ocultar_Todo();
+                            Videos.Source = new Uri(@"Video\epona.wmv", UriKind.Relative);
+                            Videos.Play();
+                            Videos.Visibility = Visibility.Visible;
 
                             // Letrero
-                            ocultar_Todo();
-                            VidEpona.Visibility = Visibility.Visible;
                             LtEpona.Visibility = Visibility.Visible;
                         }
                         else if (cancion == zelda)
                         {
-
                             // Video Playback
-                            VidZelda.Source = new Uri(@"Video\zelda.wmv", UriKind.Relative);
-                            VidZelda.Play();
-
                             ocultar_Todo();
-                            VidZelda.Visibility = Visibility.Visible;
+                            Videos.Source = new Uri(@"Video\zelda.wmv", UriKind.Relative);
+                            Videos.Play();
+                            
+                            Videos.Visibility = Visibility.Visible;
                             LtNana.Visibility = Visibility.Visible;
-
                         }
                         else if (cancion == saria)
                         {
                             // Video Playback
-                            VidSaria.Source = new Uri(@"Video\saria.wmv", UriKind.Relative);
-                            VidSaria.Play();
-
                             ocultar_Todo();
-                            VidSaria.Visibility = Visibility.Visible;
-                            LtSaria.Visibility = Visibility.Visible;
+                            Videos.Source = new Uri(@"Video\saria.wmv", UriKind.Relative);
+                            Videos.Play();
 
+                            Videos.Visibility = Visibility.Visible;
+                            LtSaria.Visibility = Visibility.Visible;
                         }
                         else if (cancion == sun)
                         {
                             // Video Playback
-                            VidSun.Source = new Uri(@"Video\sun.wmv", UriKind.Relative);
-                            VidSun.Play();
-
                             ocultar_Todo();
-                            VidSun.Visibility = Visibility.Visible;
-                            LtSol.Visibility = Visibility.Visible;
+                            Videos.Source = new Uri(@"Video\sun.wmv", UriKind.Relative);
+                            Videos.Play();
 
+                            Videos.Visibility = Visibility.Visible;
+                            LtSol.Visibility = Visibility.Visible;
                         }
                         else if (cancion == storms)
                         {
-                            // Video Playback
-                            VidStorms.Source = new Uri(@"Video\storms.wmv", UriKind.Relative);
-                            VidStorms.Play();
 
                             ocultar_Todo();
-                            VidStorms.Visibility = Visibility.Visible;
+                            // Video Playback
+                            Videos.Source = new Uri(@"Video\storms.wmv", UriKind.Relative);
+                            Videos.Play();
+
+                            Videos.Visibility = Visibility.Visible;
                             LtTormentas.Visibility = Visibility.Visible;
-                            
                         }
                         else if (cancion == time)
                         {
-                            // Video Playback
-                            VidTime.Source = new Uri(@"Video\time.wmv", UriKind.Relative);
-                            VidTime.Play();
-
                             ocultar_Todo();
-                            VidTime.Visibility = Visibility.Visible;
+                            // Video Playback
+                            Videos.Source = new Uri(@"Video\time.wmv", UriKind.Relative);
+                            Videos.Play();
+
+                            Videos.Visibility = Visibility.Visible;
                             LtTiempo.Visibility = Visibility.Visible;
 
                         }
                         else if (cancion == light)
                         {
                             // Video Playback
-                            VidLight.Source = new Uri(@"Video\light.wmv", UriKind.Relative);
-                            VidLight.Play();
-
                             ocultar_Todo();
-                            VidLight.Visibility = Visibility.Visible;
-                            LtLuz.Visibility = Visibility.Visible;
+                            Videos.Source = new Uri(@"Video\light.wmv", UriKind.Relative);
+                            Videos.Play();
 
+                            Videos.Visibility = Visibility.Visible;
+                            LtLuz.Visibility = Visibility.Visible;
                         }
                         else if (cancion == spirit)
                         {
                             // Video Playback
-                            VidSpirit.Source = new Uri(@"Video\spirit.wmv", UriKind.Relative);
-                            VidSpirit.Play();
-
                             ocultar_Todo();
-                            VidSpirit.Visibility = Visibility.Visible;
-                            LtEspiritu.Visibility = Visibility.Visible;
+                            Videos.Source = new Uri(@"Video\spirit.wmv", UriKind.Relative);
+                            Videos.Play();
 
+                            Videos.Visibility = Visibility.Visible;
+                            LtEspiritu.Visibility = Visibility.Visible;
                         }
                         else if (cancion == healing)
                         {
                             // Video Playback
-                            VidHealing.Source = new Uri(@"Video\healing.wmv", UriKind.Relative);
-                            VidHealing.Play();
-
                             ocultar_Todo();
-                            VidHealing.Visibility = Visibility.Visible;
+                            Videos.Source = new Uri(@"Video\healing.wmv", UriKind.Relative);
+                            Videos.Play();
+
+                            Videos.Visibility = Visibility.Visible;
                             LtSanacion.Visibility = Visibility.Visible;
 
                         }
                         else if (cancion == forest)
                         {
                             // Video Playback
-                            VidForest.Source = new Uri(@"Video\forest.wmv", UriKind.Relative);
-                            VidForest.Play();
-
                             ocultar_Todo();
-                            VidForest.Visibility = Visibility.Visible;
-                            LtBosque.Visibility = Visibility.Visible;
+                            Videos.Source = new Uri(@"Video\forest.wmv", UriKind.Relative);
+                            Videos.Play();
 
+                            Videos.Visibility = Visibility.Visible;
+                            LtBosque.Visibility = Visibility.Visible;
                         }
                     }
                     if (lbl_Nota.Text.Length >= 16)
@@ -187,12 +181,12 @@ namespace Entrada
                         string cancion = lbl_Nota.Text.Substring(lbl_Nota.Text.Length - 16, 16);
                         if (cancion == fuego)
                         {
-                            // Video Playback
-                            VidFire.Source = new Uri(@"Video\Fire.wmv", UriKind.Relative);
-                            VidFire.Play();
-
                             ocultar_Todo();
-                            VidFire.Visibility = Visibility.Visible;
+                            // Video Playback
+                            Videos.Source = new Uri(@"Video\Fire.wmv", UriKind.Relative);
+                            Videos.Play();
+
+                            Videos.Visibility = Visibility.Visible;
                             LtFuego.Visibility = Visibility.Visible;
                         }
                     }
@@ -201,12 +195,12 @@ namespace Entrada
                         string cancion = lbl_Nota.Text.Substring(lbl_Nota.Text.Length - 10, 10);
                         if (cancion == agua)
                         {
-                            // Video Playback
-                            VidWater.Source = new Uri(@"Video\Water.wmv", UriKind.Relative);
-                            VidWater.Play();
-
                             ocultar_Todo();
-                            VidWater.Visibility = Visibility.Visible;
+                            // Video Playback
+                            Videos.Source = new Uri(@"Video\Water.wmv", UriKind.Relative);
+                            Videos.Play();
+
+                            Videos.Visibility = Visibility.Visible;
                             LtAgua.Visibility = Visibility.Visible;
                         }
                     }
@@ -388,6 +382,7 @@ namespace Entrada
             if (play == true)
             {
                 waveIn.StopRecording();
+                Videos.IsMuted = true;
             }
             ocultar_Todo();
 
@@ -400,18 +395,7 @@ namespace Entrada
 
         private void ocultar_Todo()
         {
-            VidEpona.Visibility = Visibility.Hidden;     // Videos
-            VidSaria.Visibility = Visibility.Hidden;
-            VidSpirit.Visibility = Visibility.Hidden;
-            VidForest.Visibility = Visibility.Hidden;
-            VidFire.Visibility = Visibility.Hidden;
-            VidWater.Visibility = Visibility.Hidden;
-            VidLight.Visibility = Visibility.Hidden;
-            VidHealing.Visibility = Visibility.Hidden;
-            VidStorms.Visibility = Visibility.Hidden;
-            VidTime.Visibility = Visibility.Hidden;
-            VidSun.Visibility = Visibility.Hidden;
-            VidZelda.Visibility = Visibility.Hidden;
+            Videos.Visibility = Visibility.Hidden;     // Videos
             LtEscuchando.Visibility = Visibility.Hidden;    // Letreros, Notas y Ocarina
             btn_Reconocer.Visibility = Visibility.Hidden;
             Ocarina.Visibility = Visibility.Hidden;
@@ -434,6 +418,7 @@ namespace Entrada
             LtLuz.Visibility = Visibility.Hidden;
             LtEspiritu.Visibility = Visibility.Hidden;
             LtBosque.Visibility = Visibility.Hidden;
+
         }
     }
 }
