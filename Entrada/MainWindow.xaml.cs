@@ -29,8 +29,8 @@ namespace Entrada
         string letraAnterior = "";
         string letraActual = "";
         bool play = false;
-        string epona = "w a d w a d ", saria = "s d a s d a ", zelda = "a w d a w d ", sun = "d s w d s w ", storms = "e s w e s w ", time = "d e s d e s ",
-            healing = "a d s a d s ", spirit = "e s e d s e ", light = "w d w d a w ", forest ="e w a d a d ",
+        string epona = "w a d w a d ", saria = "s d a s d a ", zelda = "a w d a w d ", sun = "d s w d s w ", storms = "e s w e s w ", 
+            time = "d e s d e s ", healing = "a d s a d s ", spirit = "e s e d s e ", light = "w d w d a w ", forest ="e w a d a d ",
             // Otra cantidad de notas
             fuego = "s e s e d s d s ", agua = "e s d d a ";
 

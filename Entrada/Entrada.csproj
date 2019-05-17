@@ -102,18 +102,20 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Audio\Success.mp3" />
+    <Content Include="Video\epona.wmv" />
+    <Content Include="Video\fire.wmv" />
+    <Content Include="Video\forest.wmv" />
+    <Content Include="Video\healing.wmv" />
+    <Content Include="Video\light.wmv" />
+    <Content Include="Video\saria.wmv" />
+    <Content Include="Video\spirit.wmv" />
+    <Content Include="Video\storm.wmv" />
+    <Content Include="Video\sun.wmv" />
+    <Content Include="Video\time.wmv" />
+    <Content Include="Video\water.wmv" />
+    <Content Include="Video\zelda.wmv" />
     <Resource Include="Image\BtnOcarina.png" />
     <Resource Include="Image\LtReconocer.png" />
-    <Content Include="Video\Epona.mp4" />
-    <Content Include="Video\Healing.mp4" />
-    <Content Include="Video\Forest.mp4" />
-    <Content Include="Video\Light.mp4" />
-    <Content Include="Video\Spirit.mp4" />
-    <Content Include="Video\Saria.mp4" />
-    <Content Include="Video\Storms.mp4" />
-    <Content Include="Video\Sun.mp4" />
-    <Content Include="Video\Time.mp4" />
-    <Content Include="Video\Zelda.mp4" />
     <Resource Include="Image\LtTormentas.png" />
     <Resource Include="Image\LtLuz.png" />
     <Resource Include="Image\LtNana.png" />
