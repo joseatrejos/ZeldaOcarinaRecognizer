@@ -7,8 +7,17 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="676.4" Width="838.2">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="401*"/>
+            <ColumnDefinition Width="8*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
         <!-- Fondo y Letreros -->
-        <Canvas x:Name="canvas" HorizontalAlignment="Left" Height="617" Margin="0,0,-0.4,-0.2" VerticalAlignment="Top" Width="822">
+        <Canvas x:Name="canvas" HorizontalAlignment="Left" Height="617" VerticalAlignment="Top" Width="822" Grid.RowSpan="2" Grid.ColumnSpan="3">
             <!-- Always Shown -->
             <Image x:Name="Fondo" Visibility="Visible" Height="1020" Width="1100" Canvas.Top="-188" Source="Image/Fondo.png" RenderTransformOrigin="0.006,0.571" Canvas.Left="-140" />
             <Image x:Name="Ocarina" Visibility="Hidden" Height="546" Width="723" Source="Image/Ocarina.png" RenderTransformOrigin="0.006,0.571" Canvas.Top="25" Canvas.Left="47" />
@@ -29,7 +38,6 @@
             <Image x:Name="LtAgua" Visibility="Hidden" Height="622" Width="824" Canvas.Top="373" Source="Image/LtAgua.png" RenderTransformOrigin="0.006,0.571" />
             <Image x:Name="LtSaria" Visibility="Hidden" Height="622" Width="824" Source="Image/LtSaria.png" RenderTransformOrigin="0.006,0.571" Canvas.Top="373" Canvas.Left="-2" />
             <Image x:Name="LtEpona" Visibility="Hidden" Height="622" Width="824" Source="Image/LtEpona.png" RenderTransformOrigin="0.006,0.571" Canvas.Top="373" />
-            <!-- Nuevas -->
             <Image x:Name="LtBosque" Visibility="Hidden" Height="432" Width="570" Source="Image/LtBosque.png" RenderTransformOrigin="0.006,0.571" Canvas.Top="328" Canvas.Left="130" />
             <Image x:Name="LtLuz" Visibility="Hidden" Height="432" Width="570" Source="Image/LtLuz.png" RenderTransformOrigin="0.006,0.571" Canvas.Top="328" Canvas.Left="128" />
             <Image x:Name="LtEspiritu" Visibility="Hidden" Height="432" Width="570" Source="Image/LtEspiritu.png" RenderTransformOrigin="0.006,0.571" Canvas.Top="328" Canvas.Left="126" />
@@ -41,7 +49,7 @@
         </Canvas>
 
         <!-- Microfono -->
-        <TextBlock x:Name="EligeMicrofono" HorizontalAlignment="Left" Margin="24,15,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="474" FontSize="20" RenderTransformOrigin="0.5,0.5" FontWeight="Bold" Foreground="White" Text="Micrófono:">
+        <TextBlock x:Name="EligeMicrofono" HorizontalAlignment="Left" Margin="12,15,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="474" FontSize="20" RenderTransformOrigin="0.5,0.5" FontWeight="Bold" Foreground="White" Text="Micrófono:" Grid.RowSpan="2" Grid.Column="1">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -50,25 +58,23 @@
                     <TranslateTransform/>
                 </TransformGroup>
             </TextBlock.RenderTransform></TextBlock>
-        <ComboBox x:Name="cmb_Dispositivos" HorizontalAlignment="Left" Margin="22,58,0,0" VerticalAlignment="Top" Width="178" SelectedIndex="0"/>
+        <ComboBox x:Name="cmb_Dispositivos" HorizontalAlignment="Left" Margin="10,58,0,0" VerticalAlignment="Top" Width="178" SelectedIndex="0" Grid.RowSpan="2" Grid.Column="1"/>
 
         <!-- Botones Play y Stop -->
-        <Button x:Name="btn_Reconocer" BorderThickness="0" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Visibility="Visible" HorizontalAlignment="Left" Margin="178,501,0,0" VerticalAlignment="Top" Width="465" RenderTransformOrigin="0.493,0.5" Click="btn_Iniciar_Click" Height="110">
+        <Button x:Name="btn_Reconocer" BorderThickness="0" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Visibility="Visible" HorizontalAlignment="Left" Margin="166,501,0,0" VerticalAlignment="Top" Width="465" RenderTransformOrigin="0.493,0.5" Click="btn_Iniciar_Click" Height="110" Grid.RowSpan="2" Grid.Column="1">
             <DockPanel>
                 <Image Source="Image/LtReconocer.png" Height="90" Width="454"/>
             </DockPanel>
         </Button>
-        <Button x:Name="btn_Ocarina" Visibility="Visible" BorderThickness="0" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" HorizontalAlignment="Left" Margin="202,144,0,0" VerticalAlignment="Top" Width="429" RenderTransformOrigin="0.493,0.5" Click="btn_Iniciar_Click" Height="270">
+        <Button x:Name="btn_Ocarina" Visibility="Visible" BorderThickness="0" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" HorizontalAlignment="Left" Margin="190,144,0,0" VerticalAlignment="Top" Width="429" RenderTransformOrigin="0.493,0.5" Click="btn_Iniciar_Click" Height="270" Grid.RowSpan="2" Grid.Column="1">
             <DockPanel>
                 <Image x:Name="BtnOcarina" Visibility="Visible" Height="222" Width="291" Source="Image/BtnOcarina.png" RenderTransformOrigin="0.006,0.571"/>
             </DockPanel>
         </Button>
-
-
-        <Button x:Name="btn_Detener" Content="Detener" HorizontalAlignment="Left" Margin="715,15,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.493,0.5" Click="btn_Detener_Click"/>
+        <Button x:Name="btn_Detener" Content="Detener" HorizontalAlignment="Left" Margin="703,15,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.493,0.5" Click="btn_Detener_Click" Grid.RowSpan="2" Grid.Column="1"/>
 
         <!-- Slider que guarda la frecuencia -->
-        <Slider x:Name="sld_Microfono" Visibility="Hidden" HorizontalAlignment="Left" Margin="677,71,-13,0" VerticalAlignment="Top" Width="128" RenderTransformOrigin="0.5,0.5" Maximum="44101">
+        <Slider x:Name="sld_Microfono" Visibility="Hidden" HorizontalAlignment="Left" Margin="665,71,0,0" VerticalAlignment="Top" Width="128" RenderTransformOrigin="0.5,0.5" Maximum="44101" Grid.RowSpan="2" Grid.Column="1">
             <Slider.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -80,20 +86,57 @@
         </Slider>
 
         <!-- Reconocimiento de Notas a borrar -->
-        <TextBox x:Name="lbl_Nota" HorizontalAlignment="Left" Height="75" Margin="671,520,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134"/>
-        <TextBlock x:Name="lbl_Frecuencia" HorizontalAlignment="Left" Margin="671,450,-42.4,0" TextWrapping="Wrap" Text="0 Hz" VerticalAlignment="Top" Height="37" Width="193" FontSize="24" Foreground="#FFF3F3F3" FontWeight="Bold"/>
+        <TextBox x:Name="lbl_Nota" HorizontalAlignment="Left" Height="93" Margin="668,542,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" Grid.RowSpan="2" Grid.Column="1"/>
+        <TextBlock x:Name="lbl_Frecuencia" HorizontalAlignment="Left" Margin="668,475,-43,0" TextWrapping="Wrap" Text="0 Hz" VerticalAlignment="Top" Height="37" Width="193" FontSize="24" Foreground="#FFF3F3F3" FontWeight="Bold" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="2"/>
 
-        <!-- Videos >
-        <MediaElement x:Name="VidEpona" Source="Video/Epona.mp4" Margin="170,105,192,177.2" />
-        <MediaElement x:Name="VidForest" Source="Video/Forest.mp4" Margin="170,105,192,177.2" />
-        <MediaElement x:Name="VidHealing" Source="Video/Healing.mp4" Margin="170,105,192,177.2" />
-        <MediaElement x:Name="VidLight" Source="Video/Light.mp4" Margin="170,105,192,177.2" />
-        <MediaElement x:Name="VidSaria" Source="Video/Saria.mp4" Margin="170,105,192,177.2" />
-        <MediaElement x:Name="VidSpirit" Source="Video/Spirit.mp4" Margin="170,105,192,177.2" />
-        <MediaElement x:Name="VidStorms" Source="Video/Storms.mp4" Margin="170,105,192,177.2" />
-        <MediaElement x:Name="VidSun" Source="Video/Sun.mp4" Margin="170,105,192,177.2" />
-        <MediaElement x:Name="VidTime" Source="Video/Time.mp4" Margin="170,105,192,177.2" />
-        <MediaElement x:Name="VidZelda" Source="Video/Zelda.mp4" Margin="170,105,192,177.2" /-->
+        <!-- Videos -->
+        <StackPanel Margin="9,10,-9,-10" Grid.RowSpan="2" Grid.ColumnSpan="3">
+            <MediaElement Name="VidEpona" Visibility="Hidden" Source="Video/Epona.wmv" Margin="43,105,62,177.2" Height="362" LoadedBehavior="Manual" MediaEnded="Vid_MediaEnded"/>
+        </StackPanel>
+
+        <StackPanel Margin="-1,12,1,-12" Grid.RowSpan="2" Grid.ColumnSpan="3">
+            <MediaElement Name="VidForest" Visibility="Hidden" Source="Video/Forest.wmv" Margin="37,105,32,177.2" Height="356" LoadedBehavior="Manual" MediaEnded="Vid_MediaEnded"/>
+        </StackPanel>
+
+        <StackPanel Margin="-13,-48,13,48" Grid.RowSpan="2" Grid.ColumnSpan="3">
+            <MediaElement Name="VidHealing" Visibility="Hidden" Source="Video/Healing.wmv" Margin="118,105,78,177.2" LoadedBehavior="Manual" MediaEnded="Vid_MediaEnded" Height="481"/>
+        </StackPanel>
+
+        <StackPanel Margin="-67,-34,15,6" Grid.RowSpan="2" Grid.ColumnSpan="2">
+            <MediaElement Name="VidLight" Visibility="Hidden" Source="Video/Light.wmv" Margin="174,105,65,177.2" LoadedBehavior="Manual" MediaEnded="Vid_MediaEnded" Height="449"/>
+        </StackPanel>
+
+        <StackPanel Margin="-13,-42,13,42" Grid.RowSpan="2" Grid.ColumnSpan="3">
+            <MediaElement Name="VidSaria" Visibility="Hidden" Source="Video/Saria.wmv" Margin="124,105,86,177.2" LoadedBehavior="Manual" MediaEnded="Vid_MediaEnded" Height="471"/>
+        </StackPanel>
+
+        <StackPanel Margin="-69,-44,53,44" Grid.RowSpan="2" Grid.ColumnSpan="2">
+            <MediaElement Name="VidSpirit" Visibility="Hidden" Source="Video/Spirit.wmv" Margin="180,105,32,177.2" LoadedBehavior="Manual" MediaEnded="Vid_MediaEnded" Height="469"/>
+        </StackPanel>
+
+        <StackPanel Margin="-71,-42,55,42" Grid.RowSpan="2" Grid.ColumnSpan="2">
+            <MediaElement Name="VidStorms" Visibility="Hidden" Source="Video/Storms.wmv" Margin="172,105,33,177.2" LoadedBehavior="Manual" MediaEnded="Vid_MediaEnded" Height="474"/>
+        </StackPanel>
+
+        <StackPanel Margin="-75,-48,59,48" Grid.RowSpan="2" Grid.ColumnSpan="2">
+            <MediaElement Name="VidSun" Visibility="Hidden" Source="Video/Sun.wmv" Margin="170,105,31,177.2" LoadedBehavior="Manual" MediaEnded="Vid_MediaEnded" Height="477"/>
+        </StackPanel>
+
+        <StackPanel Margin="-71,-46,55,46" Grid.RowSpan="2" Grid.ColumnSpan="2">
+            <MediaElement Name="VidTime" Visibility="Hidden" Source="Video/Time.wmv" Margin="170,105,42,177.2" LoadedBehavior="Manual" MediaEnded="Vid_MediaEnded" Height="469"/>
+        </StackPanel>
+
+        <StackPanel Margin="-22,-45,6,45" Grid.RowSpan="2" Grid.ColumnSpan="2">
+            <MediaElement Name="VidZelda" Visibility="Hidden" Source="Video/Zelda.wmv" Margin="120,105,90,177.2" LoadedBehavior="Manual" MediaEnded="Vid_MediaEnded" Height="470"/>
+        </StackPanel>
+
+        <StackPanel Margin="-35,14,19,-14" Grid.RowSpan="2" Grid.ColumnSpan="2">
+            <MediaElement Name="VidFire" Visibility="Hidden" Source="Video/Fire.wmv" Margin="140,105,78,177.2" LoadedBehavior="Manual" MediaEnded="Vid_MediaEnded" Height="355"/>
+        </StackPanel>
+
+        <StackPanel Margin="-12,15,12,-15" Grid.RowSpan="2" Grid.ColumnSpan="3">
+            <MediaElement Name="VidWater" Visibility="Hidden" Source="Video/Water.wmv" Margin="112,105,85,177.2" LoadedBehavior="Manual" MediaEnded="Vid_MediaEnded" Height="355"/>
+        </StackPanel>
     </Grid>
 </Window>
     
