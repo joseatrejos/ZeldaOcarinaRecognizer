@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Entrada"
         mc:Ignorable="d"
-        Title="MainWindow" Height="676.4" Width="838.2">
+        Title="MainWindow" Height="676.4" Width="838.2" Closed="Window_Closed">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="6*"/>
@@ -48,7 +48,7 @@
             <Image x:Name="LtTormentas" Visibility="Hidden" Height="510" Width="703" Source="Image/LtTormentas.png" RenderTransformOrigin="0.006,0.571" Canvas.Top="290" Canvas.Left="39" />
         </Canvas>
 
-        <!-- Microfono -->
+        <!-- Selección del Microfono -->
         <TextBlock x:Name="EligeMicrofono" HorizontalAlignment="Left" Margin="12,15,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="474" FontSize="20" RenderTransformOrigin="0.5,0.5" FontWeight="Bold" Foreground="White" Text="Micrófono:" Grid.RowSpan="2" Grid.Column="1">
             <TextBlock.RenderTransform>
                 <TransformGroup>
@@ -60,17 +60,19 @@
             </TextBlock.RenderTransform></TextBlock>
         <ComboBox x:Name="cmb_Dispositivos" HorizontalAlignment="Left" Margin="10,58,0,0" VerticalAlignment="Top" Width="178" SelectedIndex="0" Grid.RowSpan="2" Grid.Column="1"/>
 
-        <!-- Botones Play y Stop -->
+        <!-- Boton Play "Reconocer" -->
         <Button x:Name="btn_Reconocer" BorderThickness="0" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Visibility="Visible" HorizontalAlignment="Left" Margin="166,501,0,0" VerticalAlignment="Top" Width="465" RenderTransformOrigin="0.493,0.5" Click="btn_Iniciar_Click" Height="110" Grid.RowSpan="2" Grid.Column="1">
             <DockPanel>
                 <Image Source="Image/LtReconocer.png" Height="90" Width="454"/>
             </DockPanel>
         </Button>
+        <!-- Boton Play "Ocarina" -->
         <Button x:Name="btn_Ocarina" Visibility="Visible" BorderThickness="0" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" HorizontalAlignment="Left" Margin="190,144,0,0" VerticalAlignment="Top" Width="429" RenderTransformOrigin="0.493,0.5" Click="btn_Iniciar_Click" Height="270" Grid.RowSpan="2" Grid.Column="1">
             <DockPanel>
                 <Image x:Name="BtnOcarina" Visibility="Visible" Height="222" Width="291" Source="Image/BtnOcarina.png" RenderTransformOrigin="0.006,0.571"/>
             </DockPanel>
         </Button>
+        <!-- Botón Detener -->
         <Button x:Name="btn_Detener" Content="Detener" HorizontalAlignment="Left" Margin="703,15,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.493,0.5" Click="btn_Detener_Click" Grid.RowSpan="2" Grid.Column="1"/>
 
         <!-- Slider que guarda la frecuencia -->
@@ -91,8 +93,13 @@
 
         <!-- Videos -->
         <StackPanel Margin="9,10,-9,-10" Grid.RowSpan="2" Grid.ColumnSpan="3">
-            <MediaElement Name="Videos" Visibility="Hidden" Margin="43,105,62,177.2" Height="362" LoadedBehavior="Manual" MediaEnded="Vid_MediaEnded"/>
+            <MediaElement Name="Videos" Visibility="Hidden" Source="Video/epona.wmv" Margin="43,105,62,177.2" Height="362" LoadedBehavior="Manual" MediaEnded="Vid_MediaEnded"/>
         </StackPanel>
+        <!-- Botón Omitir -->
+        <Button x:Name="btn_Omitir" Visibility="Hidden" BorderThickness="0" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" HorizontalAlignment="Left" Margin="260,15,0,0" VerticalAlignment="Top" Width="319" RenderTransformOrigin="0.493,0.5" Height="68" Grid.RowSpan="2" Grid.Column="1" Click="Btn_Omitir_Click">
+            <DockPanel>
+                <Image Source="Image/LtEscuchando.png" Height="57" Width="289"/>
+            </DockPanel>
+        </Button>
     </Grid>
 </Window>
-    
