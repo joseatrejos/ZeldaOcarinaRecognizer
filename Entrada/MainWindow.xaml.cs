@@ -31,12 +31,14 @@ namespace Entrada
 
         DispatcherTimer timer;
 
-        string letraAnterior = "";
+        string letraAnterior = " ";
         string letraActual = "";
+       
 
         bool aplicacion = true;         // Para usar los hilos siempre que la aplicación corre
         bool play = false;              // Para evitar que la aplicación crashee al pulsar detener
         bool videoPlaying = false;      // Para no limpiar el txt_Notas 2 veces si detienen el video antes de que termine
+        bool silence = true;            // Para hacer que no reconozca más de una vez la misma nota
 
         public enum Display
         {
@@ -301,7 +303,7 @@ namespace Entrada
             if (letraActual != "" && letraActual == letraAnterior)
             {
                 // Evaluar si ya pasó un segundo
-                if (cronometro.ElapsedMilliseconds >= 100 && videoPlaying == false)
+                if (cronometro.ElapsedMilliseconds >= 100 && videoPlaying == false && silence ==true)
                 {
                     lbl_Nota.AppendText(letraActual + "");
                     letraActual = "";
@@ -464,6 +466,8 @@ namespace Entrada
                     BtnAbajo.Visibility = Visibility.Hidden;
                     BtnDerecha.Visibility = Visibility.Hidden;
                     BtnIzquierda.Visibility = Visibility.Hidden;
+                    silence = false;
+                    
                 }
                 else if (frecuenciaFundamental >= 976 && frecuenciaFundamental <= 998)
                 {
@@ -478,6 +482,7 @@ namespace Entrada
                     BtnA.Visibility = Visibility.Hidden;
                     BtnAbajo.Visibility = Visibility.Hidden;
                     BtnDerecha.Visibility = Visibility.Hidden;
+                    silence = false;
                 }
                 else if (frecuenciaFundamental >= 872 && frecuenciaFundamental <= 891)
                 {
@@ -492,6 +497,7 @@ namespace Entrada
                     BtnA.Visibility = Visibility.Hidden;
                     BtnAbajo.Visibility = Visibility.Hidden;
                     BtnIzquierda.Visibility = Visibility.Hidden;
+                    silence = false;
                 }
                 else if (frecuenciaFundamental >= 693 && frecuenciaFundamental <= 713)
                 {
@@ -506,6 +512,7 @@ namespace Entrada
                     BtnA.Visibility = Visibility.Hidden;
                     BtnDerecha.Visibility = Visibility.Hidden;
                     BtnIzquierda.Visibility = Visibility.Hidden;
+                    silence = false;
                 }
                 else if (frecuenciaFundamental >= 583 && frecuenciaFundamental <= 595)
                 {
@@ -520,8 +527,23 @@ namespace Entrada
                     BtnAbajo.Visibility = Visibility.Hidden;
                     BtnDerecha.Visibility = Visibility.Hidden;
                     BtnIzquierda.Visibility = Visibility.Hidden;
+                    silence = false;
                 }
-                else
+                else if (frecuenciaFundamental>=0 && frecuenciaFundamental<=400)
+                {
+                    if (!videoPlaying)
+                        Ocarina.Visibility = Visibility.Visible;
+                    else
+                        Ocarina.Visibility = Visibility.Hidden;
+                    BtnA.Visibility = Visibility.Hidden;
+                    BtnArriba.Visibility = Visibility.Hidden;
+                    btn_Ocarina.Visibility = Visibility.Hidden;
+                    BtnAbajo.Visibility = Visibility.Hidden;
+                    BtnDerecha.Visibility = Visibility.Hidden;
+                    BtnIzquierda.Visibility = Visibility.Hidden;
+                    silence = true;
+                }
+                    else
                     letraActual = "";
 
                 lbl_Frecuencia.Text = frecuenciaFundamental.ToString("f") + " Hz";
