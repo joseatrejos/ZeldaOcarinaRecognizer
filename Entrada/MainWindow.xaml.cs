@@ -529,7 +529,7 @@ namespace Entrada
                     BtnIzquierda.Visibility = Visibility.Hidden;
                     silence = false;
                 }
-                else if (frecuenciaFundamental>=0 && frecuenciaFundamental<=400)
+                else if (frecuenciaFundamental>=0 && frecuenciaFundamental<=580)
                 {
                     if (!videoPlaying)
                         Ocarina.Visibility = Visibility.Visible;

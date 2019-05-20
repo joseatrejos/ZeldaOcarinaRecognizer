@@ -108,6 +108,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Audio\Success.mp3" />
+    <Resource Include="Image\LtOmitir.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Content Include="Video\epona.wmv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

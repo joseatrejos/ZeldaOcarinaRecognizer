@@ -98,7 +98,7 @@
         <!-- Botón Omitir -->
         <Button x:Name="btn_Omitir" Visibility="Hidden" BorderThickness="0" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" HorizontalAlignment="Left" Margin="260,15,0,0" VerticalAlignment="Top" Width="319" RenderTransformOrigin="0.493,0.5" Height="68" Grid.RowSpan="2" Grid.Column="1" Click="Btn_Omitir_Click">
             <DockPanel>
-                <Image Source="Image/LtEscuchando.png" Height="57" Width="289"/>
+                <Image Source="Image/LtOmitir.png" Height="57" Width="289"/>
             </DockPanel>
         </Button>
     </Grid>
